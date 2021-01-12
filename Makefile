@@ -26,7 +26,7 @@ figures/%.pdf: figures/%.tex
 	rm $(notdir $(basename $@)).*
 
 text:
-	latexmk -$(LATEX) -logfilewarnings -halt-on-error $(FILENAME)
+	latexmk -$(LATEX) -logfilewarnings -halt-on-error -shell-escape $(FILENAME)
 
 document: figures text
 
