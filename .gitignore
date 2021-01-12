@@ -277,3 +277,6 @@ TSWLatexianTemp*
 
 # compressed files
 *.zip
+
+# ignore pdfs
+*.pdf
