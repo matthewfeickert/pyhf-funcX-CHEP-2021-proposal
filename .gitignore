@@ -274,3 +274,9 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# compressed files
+*.zip
+
+# ignore pdfs
+*.pdf

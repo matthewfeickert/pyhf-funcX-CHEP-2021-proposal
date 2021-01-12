@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '*'       # matches every branch
+      - '*/*'     # matches every branch containing a single '/'
+      - '!main' # excludes main
+  pull_request:
+  # Run daily at 0:01 UTC
+  schedule:
+  - cron:  '1 0 * * *'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Compile LaTeX documents
+      uses: xu-cheng/texlive-action/full@v1
+      with:
+        run: |
+          apk add make
+          make document
+    - name: List directory contents
+      run: ls -lhtra
