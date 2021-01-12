@@ -14,10 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Compile LaTeX documents
-    - uses: xu-cheng/texlive-action/full@v1
-      run: |
-        apk add make
-        make document
+      uses: xu-cheng/texlive-action/full@v1
+      with:
+        run: |
+          apk add make
+          make document
     - name: List directory contents
       run: ls -lhtra
     - name: Setup build for deployment
