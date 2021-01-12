@@ -1,0 +1,22 @@
+\usepackage[varg]{txfonts}   % Web of Conferences font
+\RequirePackage{caption}
+\usepackage{amsmath,bm}
+\graphicspath{{figures/}}
+\usepackage{lineno}
+\usepackage[normalem]{ulem}
+\usepackage[cache=false,newfloat=true]{minted}
+\PassOptionsToPackage{hyphens}{url}
+\RequirePackage{hyperref}
+\usepackage[capitalize]{cleveref}% https://ctan.org/pkg/cleveref % Must be loaded after hyperref
+
+\usemintedstyle{friendly}
+\setminted[json]{fontsize=\scriptsize, numbersep=5pt, frame=lines, framesep=2mm, gobble=0}
+\setminted[python]{fontsize=\scriptsize, numbersep=5pt, frame=lines, framesep=2mm, gobble=0, linenos}
+\captionsetup[listing]{skip=-9pt}
+
+% atlaspackage.sty
+\hypersetup{bookmarksnumbered=true, bookmarksopen=true, bookmarksopenlevel=0}
+\hypersetup{pdftitle={CHEP 2019 proceedings: Likelihood preservation and statistical reproduction of searches for new physics},
+ pdfauthor={ATLAS Collaboration}}
+\hypersetup{colorlinks,breaklinks}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue}
