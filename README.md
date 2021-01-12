@@ -6,6 +6,15 @@
 
 Proposal for CHEP 2021 on scaling fitting workflows with pyhf and funcX
 
+## Timeline
+
+* [Call for papers](https://indico.cern.ch/event/948465/abstracts/) opens (8 September, 2020)
+* Registration opens (1 February, 2021)
+* Paper submission deadline (28 February, 2021)
+* Paper acceptance notifications (15 April, 2021)
+* [vCHEP](https://indico.cern.ch/event/948465/overview) (17th-21st May, 2021)
+* Final paper revision for publication (25 June, 2021)
+
 ## [Instructions to submitters](https://indico.cern.ch/event/948465/page/21562-instructions-to-submitters)
 
 The submission of vCHEP2021 papers is now open.
