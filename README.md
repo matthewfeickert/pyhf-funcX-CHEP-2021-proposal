@@ -1,5 +1,9 @@
 # `pyhf` funcX  CHEP 2021 proposal
 
+[![Deploy build](https://github.com/matthewfeickert/pyhf-funcX-CHEP-2021-proposal/workflows/Deploy%20build/badge.svg?branch=main)](https://github.com/matthewfeickert/pyhf-funcX-CHEP-2021-proposal/actions?query=workflow%3A"Deploy+build"+branch%3Amain)
+[![GitHub view](https://img.shields.io/badge/GitHub-render-green.svg)](https://github.com/matthewfeickert/pyhf-funcX-CHEP-2021-proposal/blob/gh-pages/CHEP_2021_proposal.pdf)
+[![download](https://img.shields.io/badge/Download-build-blue.svg)](https://github.com/matthewfeickert/pyhf-funcX-CHEP-2021-proposal/raw/gh-pages/CHEP_2021_proposal.pdf)
+
 Proposal for CHEP 2021 on scaling fitting workflows with pyhf and funcX
 
 ## [Instructions to submitters](https://indico.cern.ch/event/948465/page/21562-instructions-to-submitters)
