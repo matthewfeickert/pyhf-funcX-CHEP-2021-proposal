@@ -24,6 +24,6 @@ jobs:
         args: |
           -c "\
           apk --no-cache add make && \
-          make"
+          make document"
     - name: List directory contents
       run: ls -lhtra
