@@ -1,4 +1,4 @@
-%% This is file 'webofc.cls'
+%% This is file 'latex/webofc.cls'
 %%
 %%
 %% \CharacterTable
@@ -262,10 +262,10 @@
       \def\makelabel##1{\rlap{##1}\hss}%
     }%
     \fi }%
-} 
+}
 \newcommand\CopyrightTitlename{%
   \copyright{} Owned by the authors, published by EDP Sciences, \number\year %
-} 
+}
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Font definitions %%%
@@ -439,7 +439,7 @@ e-mail: \protect\@email{#1}%
 \def\@datereceipt{\@datereceiptname}
 \def\@dateacceptance{\@dateacceptancename}
 %
-% Parse authors, institutes, thanks, and email 
+% Parse authors, institutes, thanks, and email
 %
 \def\firstname#1{{\@FirstNameAuthorFont#1\protect}}
 \def\lastname#1{{#1}}
@@ -589,7 +589,7 @@ e-mail: \protect\@email{#1}%
       \def\@makefnmark{\@textsuperscript{\scriptsize\@thefnmark}}
       \let\thanks\footnote
       \woc@maketitle
-      \endgroup \fi     
+      \endgroup \fi
       \setcounter{footnote}{0}%
 }
 \newcommand\woc@maketitle{%
@@ -619,7 +619,7 @@ e-mail: \protect\@email{#1}%
     % abstract
     \begin{abstract@margin}
       \@AbstractTitleFont
-      \abstractname.\ 
+      \abstractname.\
       \@AbstractFont
       \@abstract
     \end{abstract@margin}
@@ -632,7 +632,7 @@ e-mail: \protect\@email{#1}%
 \AtEndDocument{%
   \ifwoc@twocolumn
   \begin{strip}
-    \null \par 
+    \null \par
   \end{strip}
   \par\vspace*{\stretch{1}}
   \fi
@@ -714,7 +714,7 @@ e-mail: \protect\@email{#1}%
 {\endlist}
 \renewcommand*\descriptionlabel[1]{%
   \normalfont\bfseries #1
-  \hss % add 
+  \hss % add
 }
 %
 %%%%%%%%%%%%%%
