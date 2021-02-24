@@ -1,4 +1,4 @@
-Abstract goes here
-
 In High Energy Physics there is motivation to perform statistical inference required for analysis of data from the Large Hadron Collider on High Performance Computing environments, which can pose problems with orchestration and efficient scheduling.
+The compute architectures at these facilities do not easily support the Python compute model, and the configuration scheduling of batch jobs for physics often requires expertise in bespoke job scheduling services.
 The combination of the pure-Python libraries \pyhf{} and \funcX{} reduces the common problem in HEP analyses of performing statistical inference with binned models, that would traditionally take multiple hours and bespoke scheduling, to an on-demand (fitting) function as a service that can scalable execute across workers in just a few minutes, offering reduced time to insight and inference.
+We demonstrate execution of a scalable workflow using \funcX{} to simultaneously fit 125 signal hypotheses from a published ATLAS search for new physics using \pyhf{} with a wall time of under 3 minutes.
