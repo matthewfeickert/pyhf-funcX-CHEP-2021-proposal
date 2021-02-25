@@ -10,14 +10,4 @@ On many of these systems, Python tooling lags the current state of the art and c
 In HEP a core component of analysis of data collected at the Large Hadron Collider (LHC) is performing statistical inference for binned models to extract physics information.
 The statistical fitting tools used in HEP have traditionally been implemented in C++, but in recent years \pyhf{}~\cite{pyhf,pyhf_joss}, a pure-Python library with automatic differentiation and hardware acceleration, has grown in use for analysis related statistical inference problems.
 The fitting of multiple different hypotheses for new physics signatures (signals) is a computational problem that lends itself easily to parallelization, but is hampered on HPC environments by the additional tooling overhead required, which can be very difficult to master.
-Through use of \funcX{}~\cite{funcX_paper}, a pure-Python high performance function serving system designed to orchestrate scientific workloads across heterogeneous computing resources, \pyhf{} can be used as a highly scalable (fitting) function as a service (FaaS) on HPCs.\\
-
-Through adoption of open source "tensor" computational Python libraries, \pyhf{} is able to leverage tensor calculations to outperform the traditional C++ implementations on data from real LHC analyses.
-\funcX{} is able to create and register a service endpoint on HPC systems that interfaces with native schedulers.
-End users are able to register functions through a Python API and then scalebly execute workloads, with demonstrated use of scaling to more than 100,000 workers.
-We have demonstrated use of \funcX{} to orchestrate \pyhf{} to simultaneously fit 125 signal hypotheses in the parameter space of a published LHC physics analysis with a wall time of under 3 minutes.\\
-
-Through the combined use of the pure-Python libraries \funcX{} and \pyhf{}, we have demonstrated the ability to parallelize and accelerate statistical inference of physics analyses on HPC systems through a FaaS solution.
-
-\textbf{This is just placeholder for now to dump text.}
-Great stuff.~\cite{ATL-PHYS-PUB-2019-029}
+Through use of \funcX{}~\cite{funcX_paper}, a pure-Python high performance function serving system designed to orchestrate scientific workloads across heterogeneous computing resources, \pyhf{} can be used as a highly scalable (fitting) function as a service (FaaS) on HPCs.
