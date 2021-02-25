@@ -1,0 +1,41 @@
+$ time python demo_fit.py
+prepare  waiting-for-nodes
+--------------------
+<pyhf.workspace.Workspace object at 0x7efbd9d95530>
+Task C1N2_Wh_hbb_1000_0 complete, there are 0 results now
+Task C1N2_Wh_hbb_1000_100 complete, there are 1 results now
+Task C1N2_Wh_hbb_1000_150 complete, there are 2 results now
+Task C1N2_Wh_hbb_1000_200 complete, there are 3 results now
+Task C1N2_Wh_hbb_1000_250 complete, there are 4 results now
+Task C1N2_Wh_hbb_1000_300 complete, there are 5 results now
+Task C1N2_Wh_hbb_1000_350 complete, there are 6 results now
+Task C1N2_Wh_hbb_1000_400 complete, there are 7 results now
+Task C1N2_Wh_hbb_1000_50 complete, there are 8 results now
+Task C1N2_Wh_hbb_150_0 complete, there are 9 results now
+Task C1N2_Wh_hbb_165_35 complete, there are 10 results now
+Task C1N2_Wh_hbb_175_0 complete, there are 11 results now
+Task C1N2_Wh_hbb_175_25 complete, there are 12 results now
+Task C1N2_Wh_hbb_190_60 complete, there are 13 results now
+Task C1N2_Wh_hbb_200_0 complete, there are 14 results now
+Task C1N2_Wh_hbb_200_25 complete, there are 15 results now
+...
+... skipping forward for space
+...
+Task C1N2_Wh_hbb_800_50 complete, there are 114 results now
+Task C1N2_Wh_hbb_900_0 complete, there are 115 results now
+Task C1N2_Wh_hbb_900_100 complete, there are 116 results now
+Task C1N2_Wh_hbb_900_150 complete, there are 117 results now
+Task C1N2_Wh_hbb_900_200 complete, there are 118 results now
+running
+Task C1N2_Wh_hbb_900_300 complete, there are 119 results now
+Task C1N2_Wh_hbb_900_350 complete, there are 120 results now
+Task C1N2_Wh_hbb_900_400 complete, there are 121 results now
+Task C1N2_Wh_hbb_900_50 complete, there are 122 results now
+Task C1N2_Wh_hbb_535_400 complete, there are 123 results now
+Task C1N2_Wh_hbb_900_250 complete, there are 124 results now
+--------------------
+... skipping print of results
+
+real	2m0.100s
+user	0m7.602s
+sys	0m1.720s
