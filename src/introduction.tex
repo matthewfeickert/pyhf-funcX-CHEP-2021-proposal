@@ -1,8 +1,5 @@
 \section{Introduction}\label{sec:introduction}
-introduction goes here.
-Great stuff.~\cite{ATL-PHYS-PUB-2019-029}
 
-\textbf{This is just placeholder for now to dump text.}
 Researchers in High Energy Physics (HEP) and other fields are encouraged by their funding bodies to take advantage of the High Performance Computing (HPC) facilities constructed at various institutions.
 These facilities include capable machines such as Theta at Argonne National Laboratory with 280,000 cores and 192 hardware-accelerated GPUs.
 While powerful, these architectures do not easily support the Python compute model.
@@ -18,7 +15,9 @@ Through use of \funcX{}~\cite{funcX_paper}, a pure-Python high performance funct
 Through adoption of open source "tensor" computational Python libraries, \pyhf{} is able to leverage tensor calculations to outperform the traditional C++ implementations on data from real LHC analyses.
 \funcX{} is able to create and register a service endpoint on HPC systems that interfaces with native schedulers.
 End users are able to register functions through a Python API and then scalebly execute workloads, with demonstrated use of scaling to more than 100,000 workers.
-We have demonstrated use of \funcX{} to orchestrate \pyhf{} to simultaneously fit 125 signal hypotheses in the parameter space of a published LHC physics analysis with a wall time of under 3 minutes.
-The combination of \pyhf{} and \funcX{} reduces a common problem in HEP analyses that would traditionally take multiple hours and bespoke scheduling to an on-demand (fitting) FaaS, offering reduced time to insight and inference.\\
+We have demonstrated use of \funcX{} to orchestrate \pyhf{} to simultaneously fit 125 signal hypotheses in the parameter space of a published LHC physics analysis with a wall time of under 3 minutes.\\
 
 Through the combined use of the pure-Python libraries \funcX{} and \pyhf{}, we have demonstrated the ability to parallelize and accelerate statistical inference of physics analyses on HPC systems through a FaaS solution.
+
+\textbf{This is just placeholder for now to dump text.}
+Great stuff.~\cite{ATL-PHYS-PUB-2019-029}
