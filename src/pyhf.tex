@@ -1,9 +1,16 @@
 \subsection{\pyhf{}}\label{subsec:pyhf}
 
-Through adoption of open source "tensor" computational Python libraries, \pyhf{} is able to leverage tensor calculations to outperform the traditional C++ implementations on data from real LHC analyses.
-\funcX{} is able to create and register a service endpoint on HPC systems that interfaces with native schedulers.
-End users are able to register functions through a Python API and then scalebly execute workloads, with demonstrated use of scaling to more than 100,000 workers.
-We have demonstrated use of \funcX{} to orchestrate \pyhf{} to simultaneously fit 125 signal hypotheses in the parameter space of a published LHC physics analysis with a wall time of under 3 minutes.\\
+For measurements in HEP based on binned data (\term{histograms}), the \HiFa{}~\cite{Cranmer:1456844} family of statistical models has been widely used for likelihood construction in Standard Model measurements (e.g. Refs.~\cite{HIGG-2013-02,Aaij:2015sqa}) as well as searches for new physics (e.g. Ref.~\cite{SUSY-2016-10}) and reinterpretation studies (e.g. Ref.~\cite{Alguero:2020grj}).
+\pyhf{} is a pure-Python implementation of the \HiFa{} statistical model for multi-bin histogram-based analysis.
+\pyhf{}'s interval estimation is determined through the asymptotic formulas of~\cite{Cowan:2010js} or through pseudoexperiments (``toys'' in HEP parlance).
+% \pyhf{} supports modern computational graph libraries such as TensorFlow, PyTorch, and JAX in order to make use of features such as automatic differentiation and hardware acceleration.
+Through adoption of open source ``tensor'' computational Python libraries (e.g. NumPy, TensorFlow, PyTorch, and JAX), \pyhf{} is able to leverage tensor calculations to outperform the traditional C++ implementations on data from real LHC analyses.
+\pyhf{} is additionally able to leverage automatic differentiation and hardware acceleration from the libraries that support them to further accelerate fitting.
+Through use of JSON to provide a declarative, plain-text format for describing \HiFa{}-based likelihoods~\cite{ATL-PHYS-PUB-2019-029} --- well suited for reinterpretation and long-term preservation in analysis data repositories such as HEPData~\cite{Maguire:2017ypu} --- \pyhf{} has also become a widely used tool across experiment and theory.
+Given its lightweight core dependencies and wide distribution through The Python Package Index (PyPI), Conda-forge, and CernVM File System (CernVM-FS) it is easily installable on a wide variety of platforms, including Linux containers.
+Minimally sized Docker images containing stable releases of \pyhf{} are also distributed through Docker Hub.
 
-\textbf{This is just placeholder for now to dump text.}
-Great stuff.~\cite{ATL-PHYS-PUB-2019-029}
+% TODO: CLEAN THIS UP WHEN DONE
+% \funcX{} is able to create and register a service endpoint on HPC systems that interfaces with native schedulers.
+% End users are able to register functions through a Python API and then scalebly execute workloads, with demonstrated use of scaling to more than 100,000 workers.
+% We have demonstrated use of \funcX{} to orchestrate \pyhf{} to simultaneously fit 125 signal hypotheses in the parameter space of a published LHC physics analysis with a wall time of under 3 minutes.\\
