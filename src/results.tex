@@ -1,9 +1,7 @@
 \section{Scaling of likelihood fits}\label{sec:results}
-
-\textbf{Placeholder for results section.}
-Should also mention the setup of cluster actually used.\\
-
-The output of execution of the 125 signal hypothesis patches from the published analysis of a search for electroweakinos with the ATLAS detector using the full Run-2 dataset of \(139~\ifb\) of \(\sqrt{s} = 13\,\text{TeV}\) proton-proton collision data~\cite{SUSY-2019-08} is shown in \Cref{lst:funcX_demo_output}.
+%
+The output of execution of the 125 signal hypothesis patches from~\cite{SUSY-2019-08} is shown in \Cref{lst:funcX_demo_output}.
+Summary results for multiple trials are given in \Cref{table:performance}.
 By orchestrating \pyhf{} fits packaged as \funcX{} functions across 70 worker nodes \funcX{} is able to download the \pyhf{} pallet containing the signal patches from HEPData~\cite{ATLAS_SUSY_1Lbb_pallet}, start \funcX{} worker nodes, send patched workspaces to each worker, fit the workspace and return the results with a wall time of just over two minutes.
 \TODO{CLARIFY AND REVISE THIS.}\\
 
@@ -13,3 +11,17 @@ By orchestrating \pyhf{} fits packaged as \funcX{} functions across 70 worker no
  The wall time (\texttt{real}) shows the simultaneous fit orchestrated by \funcX{} is performed in just over two minutes.}
  \label{lst:funcX_demo_output}
 \end{listing}
+
+\begin{table}[htpb]
+ \centering
+ \caption{Performance of analysis on RIVER for $n$ trials.
+ \TODO{If we dedice to keep this revise heavily.}}
+ \begin{tabular}{@{}lrrr@{}} \toprule
+  Analysis        & Number of worker nodes & Mean wall time (sec) & Best wall time (sec)\\ \midrule
+  ATLAS SUSY 1Lbb & $70$                   & $???$                & $120$\\
+  ATLAS SUSY XXXX & $70$                   & $???$                & $???$\\
+  \bottomrule
+ \end{tabular}\label{table:performance}%
+\end{table}
+
+\TODO{If time, replicate to get distribution of results and get different analyses.}
