@@ -12,16 +12,6 @@ By orchestrating \pyhf{} fits packaged as \funcX{} functions across 70 worker no
  \label{lst:funcX_demo_output}
 \end{listing}
 
-\begin{table}[htpb]
- \centering
- \caption{Performance of analysis on RIVER for $n$ trials.
- \TODO{If we dedice to keep this revise heavily.}}
- \begin{tabular}{@{}lrrr@{}} \toprule
-  Analysis        & Number of worker nodes & Mean wall time (sec) & Best wall time (sec)\\ \midrule
-  ATLAS SUSY 1Lbb & $70$                   & $???$                & $120$\\
-  ATLAS SUSY XXXX & $70$                   & $???$                & $???$\\
-  \bottomrule
- \end{tabular}\label{table:performance}%
-\end{table}
+\input{src/tables/performance_table.tex}
 
 \TODO{If time, replicate to get distribution of results and get different analyses.}
