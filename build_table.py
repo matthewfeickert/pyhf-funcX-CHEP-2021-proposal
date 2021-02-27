@@ -27,7 +27,7 @@ def main():
     mean_wall_time.append("???")
     best_wall_time.append("???")
 
-    df = pd.DataFrame(
+    table_data = pd.DataFrame(
         dict(
             analysis=["ATLAS SUSY 1Lbb", "ATLAS SUSY XXXX"],
             worker_nodes=[85, 85],
@@ -36,14 +36,18 @@ def main():
         )
     )
 
-    performance_table_latex = df.to_latex(
+    caption = (
+        f"Fitting performance on RIVER for analyses for {len(times)} trials."
+        + " The uncertainty on the mean wall time corresponds to the standard deviation of the fit times."
+    )
+    performance_table_latex = table_data.to_latex(
         header=[
             "Analysis",
             "Worker nodes",
             "Mean wall time (sec)",
             "Best wall time (sec)",
         ],
-        caption=f"Fitting performance on RIVER for analyses for {len(times)} trials.",
+        caption=caption,
         label="table:performance",
         index=False,
         escape=False,
