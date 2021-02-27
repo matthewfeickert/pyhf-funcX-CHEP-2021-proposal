@@ -39,6 +39,7 @@ def main():
     caption = (
         f"Fitting performance on RIVER for analyses for {len(times)} trials."
         + " The uncertainty on the mean wall time corresponds to the standard deviation of the fit times."
+        + " The number of worker nodes used is approximate as per-run reporting is not available."
     )
     performance_table_latex = table_data.to_latex(
         header=[
