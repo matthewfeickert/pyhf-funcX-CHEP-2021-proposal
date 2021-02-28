@@ -1,10 +1,14 @@
 \section{Scaling of likelihood fits}\label{sec:results}
 %
-The output of execution of the 125 signal hypothesis patches from~\cite{SUSY-2019-08} is shown in \Cref{lst:funcX_demo_output}.
-Summary results for multiple trials are given in \Cref{table:performance}.
-By orchestrating \pyhf{} fits packaged as \funcX{} functions across 85 worker nodes \funcX{} is able to download the \pyhf{} pallet containing the signal patches from HEPData~\cite{ATLAS_SUSY_1Lbb_pallet}, start \funcX{} worker nodes, send patched workspaces to each worker, fit the workspace and return the results with a wall time of just over two minutes.
+% The output of execution of the 125 signal hypothesis patches from~\cite{SUSY-2019-08} is shown in \Cref{lst:funcX_demo_output}.
+A clear example of the performance gains provided by deploying \pyhf{} on \funcX{} is the execution of the 125 signal hypothesis patches from~\cite{SUSY-2019-08}.
+By orchestrating \pyhf{} fits packaged as \funcX{} functions across 85 worker nodes, \funcX{} is able to receive posted JSON serializations of the \pyhf{} pallet containing the background workspace and signal patches downloaded from HEPData~\cite{ATLAS_SUSY_1Lbb_pallet}, start \funcX{} worker nodes, send patched workspaces to each worker, fit the workspace and return the results with a wall time of under 2 minutes and 30 seconds.
+As this wall time includes data transfer to and from RIVER and worker node orchestration time, the time required for inference alone is even smaller.
+Example typical run output and performance can be seen in~\Cref{lst:funcX_demo_output}.
+The timing results for~\cite{ATLAS_SUSY_1Lbb_pallet} over multiple trials are summarized in~\Cref{table:performance} along with the results from additional analyses that have published probability models as \pyhf{} pallets on HEPData.
 All code used in these studies is publicly available on GitHub at Ref.~\cite{study_code}.
-\TODO{CLARIFY AND REVISE THIS.}\\
+
+\input{src/tables/performance_table.tex}
 
 \begin{listing}
  \inputminted{text}{src/code/funcX_demo_output.txt}
@@ -12,5 +16,3 @@ All code used in these studies is publicly available on GitHub at Ref.~\cite{stu
  The wall time (\texttt{real}) shows the simultaneous fit orchestrated by \funcX{} is performed in 2 minutes and 20 seconds.}
  \label{lst:funcX_demo_output}
 \end{listing}
-
-\input{src/tables/performance_table.tex}
