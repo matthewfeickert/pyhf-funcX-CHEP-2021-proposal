@@ -3,6 +3,7 @@
 The output of execution of the 125 signal hypothesis patches from~\cite{SUSY-2019-08} is shown in \Cref{lst:funcX_demo_output}.
 Summary results for multiple trials are given in \Cref{table:performance}.
 By orchestrating \pyhf{} fits packaged as \funcX{} functions across 85 worker nodes \funcX{} is able to download the \pyhf{} pallet containing the signal patches from HEPData~\cite{ATLAS_SUSY_1Lbb_pallet}, start \funcX{} worker nodes, send patched workspaces to each worker, fit the workspace and return the results with a wall time of just over two minutes.
+All code used in these studies is publicly available on GitHub at Ref.~\cite{study_code}.
 \TODO{CLARIFY AND REVISE THIS.}\\
 
 \begin{listing}
@@ -13,5 +14,3 @@ By orchestrating \pyhf{} fits packaged as \funcX{} functions across 85 worker no
 \end{listing}
 
 \input{src/tables/performance_table.tex}
-
-\TODO{If time, replicate to get distribution of results and get different analyses.}
