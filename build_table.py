@@ -13,7 +13,7 @@ def main():
     mean_wall_time = []
     best_wall_time = []
 
-    file_list = ["1Lbb_times.txt"]
+    file_list = ["1Lbb_times.txt", "InclSS3L_times.txt", "SUSY-2018-04_times.txt"]
     for filename in file_list:
         file_path = Path("data").joinpath(filename)
         with open(file_path, "r") as readfile:
@@ -23,14 +23,10 @@ def main():
         mean_wall_time.append(f"${np.mean(times)}\pm{np.std(times):.1f}$")
         best_wall_time.append(np.min(times))
 
-    # Remove later
-    mean_wall_time.append("???")
-    best_wall_time.append("???")
-
     table_data = pd.DataFrame(
         dict(
-            analysis=["ATLAS SUSY 1Lbb", "ATLAS SUSY XXXX"],
-            worker_nodes=[85, 85],
+            analysis=["ATLAS SUSY 1Lbb", "ATLAS SUSY SS3L", "ATLAS SUSY 2018"],
+            worker_nodes=[85, 85, 85],
             mean_wall_time=mean_wall_time,
             best_wall_time=best_wall_time,
         )
