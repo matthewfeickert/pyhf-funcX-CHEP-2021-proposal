@@ -118,14 +118,6 @@ series = {HPDC '19}
   url = {https://github.com/matthewfeickert/distributed-inference-with-pyhf-and-funcX},
 }
 
-%
-%
-%
-% References below here that aren't used will be deleted from the draft
-%
-%
-%
-% CHEP 2019 references
 @article{Maguire:2017ypu,
       author         = "Maguire, Eamonn and Heinrich, Lukas and Watt, Graeme",
       title          = "{HEPData: a repository for high energy physics data}",
@@ -154,132 +146,6 @@ series = {HPDC '19}
       url           = "https://cds.cern.ch/record/1456844",
 }
 
-% DIANA/HEP NSF proposal
-@misc{DIANA-proposal-2014,
-    title = {{Data-Intensive Analysis for High Energy Physics (DIANA/HEP)}},
-    author = {Elmer, Peter and Cranmer, Kyle and Sokolof, Mike and Bockelman, Brian},
-    year = {2014},
-    month = {June},
-    url = {http://diana-hep.org/downloads/ssi2014-nsf-proposal.pdf},
-}
-
-% DIANA/HEP fellowship summary report
-@misc{matthew_feickert_2018_1458059,
-  author       = {Matthew Feickert},
-  title        = {{A study of data flow graph frameworks for statistical models in particle physics}},
-  month        = {October},
-  year         = {2018},
-  doi          = {10.5281/zenodo.1458059},
-  url          = {https://doi.org/10.5281/zenodo.1458059}
-}
-
-% JSONPatch reference
-@misc{rfc6902,
-	series =	{Request for Comments},
-	number =	6902,
-	howpublished =	{RFC 6902},
-	publisher =	{RFC Editor},
-	doi =		{10.17487/RFC6902},
-	url =		{https://rfc-editor.org/rfc/rfc6902.txt},
-  author =	{Paul C. Bryan and Mark Nottingham},
-	pagetotal =	18,
-	year =		2013,
-	month =		apr,
-	abstract =	{JSON Patch defines a JSON document structure for expressing a sequence of operations to apply to a JavaScript Object Notation (JSON) document; it is suitable for use with the HTTP PATCH method. The "application/json-patch+json" media type is used to identify such patch documents.},
-}
-
-@misc{schema_workspace,
-  title = {Workspace Schema, v1.0.0},
-  howpublished = {\url{https://diana-hep.org/pyhf/schemas/1.0.0/workspace.json}},
-  note = {Accessed: 2019-07-01}
-}
-
-@misc{schema_model,
-  title = {Model Schema, v1.0.0},
-  howpublished = {\url{https://diana-hep.org/pyhf/schemas/1.0.0/model.json}},
-  note = {Accessed: 2019-07-01}
-}
-
-@misc{schema_defs,
-  title = {Base Definitions Schema, v1.0.0},
-  howpublished = {\url{https://diana-hep.org/pyhf/schemas/1.0.0/defs.json}},
-  note = {Accessed: 2019-07-01}
-}
-
-@misc{hepdata_sbottom,
-    author = "{ATLAS Collaboration}",
-    abstract = "",
-    howpublished = "HEPData",
-    doi = "10.17182/hepdata.89408",
-    year = "2019",
-    type = "Data Collection",
-    url = "https://www.hepdata.net/record/ins1748602?version=1"
-}
-
-@article{ROOT,
-title = "ROOT — An object oriented data analysis framework",
-journal = "Nucl. Inst. Meth. in Phys. Res. A",
-volume = "389",
-number = "1",
-pages = "81 - 86",
-year = "1997",
-issn = "0168-9002",
-doi = "https://doi.org/10.1016/S0168-9002(97)00048-X",
-url = "http://www.sciencedirect.com/science/article/pii/S016890029700048X",
-author = "Rene Brun and Fons Rademakers",
-abstract = "The ROOT system in an Object Oriented framework for large scale data analysis. ROOT written in C++, contains, among others, an efficient hierarchical OO database, a C++ interpreter, advanced statistical analysis (multi-dimensional histogramming, fitting, minimization, cluster finding algorithms) and visualization tools. The user interacts with ROOT via a graphical user interface, the command line or batch scripts. The command and scripting language is C++ (using the interpreter) and large scripts can be compiled and dynamically linked in. The OO database design has been optimized for parallel access (reading as well as writing) by multiple processes."
-}
-
-@article{RooStats,
-      author         = "Moneta, Lorenzo and others",
-      title          = "{The RooStats Project (proceedings)}",
-      booktitle      = "{Proceedings, 13th International Workshop on Advanced
-                        computing and analysis techniques in physics research
-                        (ACAT2010): Jaipur, India, February 22-27, 2010}",
-      journal        = "PoS",
-      volume         = "ACAT2010",
-      year           = "2010",
-      pages          = "057",
-      doi            = "10.22323/1.093.0057",
-      SLACcitation   = "%%CITATION = ARXIV:1009.1003;%%"
-}
-
-@article{scipy,
-      author = {{Virtanen}, Pauli and others},
-      title = "{SciPy 1.0: Fundamental Algorithms for Scientific
-                  Computing in Python}",
-      journal = {Nature Methods},
-      year = "2020",
-      volume={17},
-      pages={261--272},
-      adsurl = {https://rdcu.be/b08Wh},
-      doi = {https://doi.org/10.1038/s41592-019-0686-2},
-}
-
-@article{numpy,
-author={S. {van der Walt} and S. C. {Colbert} and G. {Varoquaux}},
-journal={Computing in Science Engineering},
-title={The NumPy Array: A Structure for Efficient Numerical Computation},
-year={2011},
-volume={13},
-number={2},
-pages={22-30},
-keywords={data structures;high level languages;mathematics computing;numerical analysis;numerical computation;numpy array;numerical data;high level language;Python programming language;Arrays;Numerical analysis;Performance evaluation;Computational efficiency;Finite element methods;Vector quantization;Resource management;Python;NumPy;scientific programming;numerical computations;programming libraries},
-doi={10.1109/MCSE.2011.37},
-ISSN={1521-9615},
-month={March},}
-
-@proceedings{James:2000et,
-      editor         = "James, F. and Perrin, Y. and Lyons, L.",
-      title          = "{Workshop on confidence limits: Proceedings}",
-      url            = "https://cds.cern.ch/record/411537",
-      month          = jan,
-      year           = "2000",
-      reportNumber   = "CERN-2000-005",
-      doi            = "10.5170/CERN-2000-005",
-      SLACcitation   = "%%CITATION = CERN-2000-005;%%"
-}
-
 % Uses HistFactory for background
 @article{Aaij:2015sqa,
     author = "{LHCb Collaboration}",
@@ -293,17 +159,4 @@ month={March},}
     number = "3",
     pages = "032002",
     year = "2015"
-}
-
-@article{Heinrich:2018nip,
-    author = "Heinrich, Lukas and Schulz, Holger and Turner, Jessica and Zhou, Ye-Ling",
-    title = "{Constraining A$_{4}$ leptonic flavour model parameters at colliders and beyond}",
-    archivePrefix = "arXiv",
-    primaryClass = "hep-ph",
-    reportNumber = "FERMILAB-PUB-18-548-CD-T, NSF ACI-1450310, PHY-1505463",
-    doi = "10.1007/JHEP04(2019)144",
-    journal = "JHEP",
-    volume = "04",
-    pages = "144",
-    year = "2019"
 }
