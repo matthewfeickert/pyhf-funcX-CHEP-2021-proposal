@@ -13,15 +13,22 @@ def main():
     mean_wall_time = []
     best_wall_time = []
 
-    file_list = ["1Lbb_times.txt", "InclSS3L_times.txt", "SUSY-2018-04_times.txt"]
+    file_list = ["1Lbb", "InclSS3L", "staus"]
     for filename in file_list:
-        file_path = Path("data").joinpath(filename)
+        file_path = Path("data").joinpath(f"{filename}_times.txt")
         with open(file_path, "r") as readfile:
             lines = readfile.readlines()
 
         times = np.array([convert_to_seconds(line) for line in lines])
         mean_wall_time.append(f"${np.mean(times)}\pm{np.std(times):.1f}$")
-        best_wall_time.append(np.min(times))
+
+    single_node_time = []
+    file_list = ["1Lbb", "InclSS3L", "staus"]
+    for filename in file_list:
+        file_path = Path("data").joinpath(f"{filename}_single_node_time.txt")
+        with open(file_path, "r") as readfile:
+            time = readfile.readlines()[0]
+        single_node_time.append(convert_to_seconds(time))
 
     table_data = pd.DataFrame(
         dict(
@@ -31,9 +38,10 @@ def main():
                 "JHEP 06 (2020) 46",
                 "Phys. Rev. D 101 (2020) 032009",
             ],
+            patches=[125, 76, 57],
             worker_nodes=[85, 85, 85],
             mean_wall_time=mean_wall_time,
-            single_node=["Awaiting results", "Awaiting results", "Awaiting results"],
+            single_node_time=single_node_time,
         )
     )
 
@@ -46,16 +54,17 @@ def main():
     performance_table_latex = table_data.to_latex(
         header=[
             "Analysis",
+            "Patches",
             "Workers",
             "Wall time (sec)",
-            "Single node time (sec)",
+            "Single node (sec)",
         ],
         caption=caption,
         label="table:performance",
         index=False,
         escape=False,
         float_format="{:0.1f}".format,
-        column_format="@{}lrrr@{}",
+        column_format="@{}lrrrr@{}",
         position="htpb",
     )
 
