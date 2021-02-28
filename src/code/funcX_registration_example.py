@@ -19,19 +19,23 @@ if __name__ == "__main__":
     with open("1Lbb-pallet/BkgOnly.json") as bkgonly_json:
         bkgonly_workspace = json.load(bkgonly_json)
 
-    pyhf_endpoint = "endpoint id is assigned here"
+    # Use privately assigned endpoint id
+    with open("endpoint_id.txt") as endpoint_file:
+        pyhf_endpoint = str(endpoint_file.read().rstrip())
 
     fxc = FuncXClient()
 
+    # Register function and execute on worker node
     prepare_func = fxc.register_function(prepare_workspace)
     prepare_task = fxc.run(
         bkgonly_workspace, endpoint_id=pyhf_endpoint, function_id=prepare_func
     )
 
+    # Wait for worker to finish and retrieve results
     workspace = None
     while not workspace:
         try:
             workspace = fxc.get_result(prepare_task)
         except Exception as excep:
             print(f"prepare: {excep}")
-            sleep(15)
+            sleep(10)
