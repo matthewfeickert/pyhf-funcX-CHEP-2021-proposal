@@ -1,2 +1,13 @@
-introduction goes here.
-Great stuff.~\cite{ATL-PHYS-PUB-2019-029}
+\section{Introduction}\label{sec:introduction}
+
+Researchers in High Energy Physics (HEP) and other fields are encouraged by their funding bodies to take advantage of the High Performance Computing (HPC) facilities constructed at various institutions.
+These facilities include capable machines such as Theta at Argonne National Laboratory with 280,000 cores and 192 hardware-accelerated GPUs~\cite{ThetaANL}.
+While powerful, these architectures do not easily support the Python compute model.
+Users must construct batch jobs and submit them to a queue for execution when compute time is available.
+The results are stored on the file system and must be stitched back together once all of the jobs have completed.
+On many of these systems, Python tooling lags the current state of the art and configuring modern Python libraries to use HPCs can be a tedious task and require expertise.\\
+
+In HEP a core component of analysis of data collected at the Large Hadron Collider (LHC) is performing statistical inference for binned models to extract physics information.
+The statistical fitting tools used in HEP have traditionally been implemented in C++, but in recent years \pyhf{}~\cite{pyhf,pyhf_joss}, a pure-Python library with automatic differentiation and hardware acceleration, has grown in use for analysis related statistical inference problems.
+The fitting of multiple different hypotheses for new physics signatures (signals) is a computational problem that lends itself easily to parallelization, but is hampered on HPC environments by the additional tooling overhead required, which can be very difficult to master.
+Through use of \funcX{}~\cite{funcX_paper}, a pure-Python high performance function serving system designed to orchestrate scientific workloads across heterogeneous computing resources, \pyhf{} can be used as a highly scalable (fitting) function as a service (FaaS) on HPCs.

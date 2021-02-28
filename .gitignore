@@ -280,3 +280,6 @@ TSWLatexianTemp*
 
 # ignore pdfs
 *.pdf
+
+# minted
+_minted*

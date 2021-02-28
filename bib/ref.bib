@@ -1,3 +1,123 @@
+% pyhf Zenodo
+@software{pyhf,
+  author = {Lukas Heinrich and Matthew Feickert and Giordon Stark},
+  title = "{pyhf: v0.6.0}",
+  version = {0.6.0},
+  doi = {10.5281/zenodo.1169739},
+  url = {https://doi.org/10.5281/zenodo.1169739},
+}
+
+% pyhf JOSS
+@article{pyhf_joss,
+  doi = {10.21105/joss.02823},
+  url = {https://doi.org/10.21105/joss.02823},
+  year = {2021},
+  publisher = {The Open Journal},
+  volume = {6},
+  number = {58},
+  pages = {2823},
+  author = {Lukas Heinrich and Matthew Feickert and Giordon Stark and Kyle Cranmer},
+  title = {pyhf: pure-Python implementation of HistFactory statistical models},
+  journal = {Journal of Open Source Software}
+}
+
+% funcX
+@inproceedings{funcX_paper,
+author = {Chard, Ryan and Babuji, Yadu and Li, Zhuozhao and Skluzacek, Tyler and Woodard, Anna and Blaiszik, Ben and Foster, Ian and Chard, Kyle},
+title = {FuncX: A Federated Function Serving Fabric for Science},
+year = {2020},
+isbn = {9781450370523},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3369583.3392683},
+doi = {10.1145/3369583.3392683},
+abstract = {Exploding data volumes and velocities, new computational methods and platforms, and ubiquitous connectivity demand new approaches to computation in the sciences. These new approaches must enable computation to be mobile, so that, for example, it can occur near data, be triggered by events (e.g., arrival of new data), be offloaded to specialized accelerators, or run remotely where resources are available. They also require new design approaches in which monolithic applications can be decomposed into smaller components, that may in turn be executed separately and on the most suitable resources. To address these needs we present funcX---a distributed function as a service (FaaS) platform that enables flexible, scalable, and high performance remote function execution. funcX's endpoint software can transform existing clouds, clusters, and supercomputers into function serving systems, while funcX's cloud-hosted service provides transparent, secure, and reliable function execution across a federated ecosystem of endpoints. We motivate the need for funcX with several scientific case studies, present our prototype design and implementation, show optimizations that deliver throughput in excess of 1 million functions per second, and demonstrate, via experiments on two supercomputers, that funcX can scale to more than more than 130 000 concurrent workers.},
+booktitle = {Proceedings of the 29th International Symposium on High-Performance Parallel and Distributed Computing},
+pages = {65–76},
+numpages = {12},
+keywords = {federated function serving, function as a service, funcX},
+location = {Stockholm, Sweden},
+series = {HPDC '20}
+}
+
+@inproceedings{Parsl_paper,
+author = {Babuji, Yadu and Woodard, Anna and Li, Zhuozhao and Katz, Daniel S. and Clifford, Ben and Kumar, Rohan and Lacinski, Lukasz and Chard, Ryan and Wozniak, Justin M. and Foster, Ian and Wilde, Michael and Chard, Kyle},
+title = {Parsl: Pervasive Parallel Programming in Python},
+year = {2019},
+isbn = {9781450366700},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3307681.3325400},
+doi = {10.1145/3307681.3325400},
+abstract = {High-level programming languages such as Python are increasingly used to provide intuitive interfaces to libraries written in lower-level languages and for assembling applications from various components. This migration towards orchestration rather than implementation, coupled with the growing need for parallel computing (e.g., due to big data and the end of Moore's law), necessitates rethinking how parallelism is expressed in programs. Here, we present Parsl, a parallel scripting library that augments Python with simple, scalable, and flexible constructs for encoding parallelism. These constructs allow Parsl to construct a dynamic dependency graph of components that it can then execute efficiently on one or many processors. Parsl is designed for scalability, with an extensible set of executors tailored to different use cases, such as low-latency, high-throughput, or extreme-scale execution. We show, via experiments on the Blue Waters supercomputer, that Parsl executors can allow Python scripts to execute components with as little as 5 ms of overhead, scale to more than 250000 workers across more than 8000 nodes, and process upward of 1200 tasks per second. Other Parsl features simplify the construction and execution of composite programs by supporting elastic provisioning and scaling of infrastructure, fault-tolerant execution, and integrated wide-area data management. We show that these capabilities satisfy the needs of many-task, interactive, online, and machine learning applications in fields such as biology, cosmology, and materials science.},
+booktitle = {Proceedings of the 28th International Symposium on High-Performance Parallel and Distributed Computing},
+pages = {25–36},
+numpages = {12},
+keywords = {parallel programming, python, parsl},
+location = {Phoenix, AZ, USA},
+series = {HPDC '19}
+}
+
+@misc{ThetaANL,
+  title={{Argonne Leadership Computing Facility}},
+  url={https://www.alcf.anl.gov/support-center/theta/theta-thetagpu-overview},
+  journal={Theta/ThetaGPU Machine Overview | Argonne Leadership Computing Facility}
+}
+
+@misc{portable_inference_workshop,
+    title = {{Fitting and Statistical Inference as a Service}},
+    author = {Matthew Feickert},
+    year = {2020},
+    month = {Dec},
+    note = {{IRIS-HEP Blueprint Workshop on Portable Inference}},
+    url = {https://indico.cern.ch/event/972791/contributions/4121109/},
+}
+
+@misc{ATLAS_SUSY_1Lbb_pallet,
+    author = {{ATLAS Collaboration}},
+    year = {2020},
+    note = {{DOI: 10.17182/hepdata.90607.v3/r3}},
+    doi = {10.17182/hepdata.90607.v3/r3},
+    url = {https://doi.org/10.17182/hepdata.90607.v3/r3},
+}
+
+% SModelS paper
+@article{Alguero:2020grj,
+    author = {Alguero, Ga\"el and Kraml, Sabine and Waltenberger, Wolfgang},
+    title = "{A SModelS interface for pyhf likelihoods}",
+    eprint = "2009.01809",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ph",
+    month = "9",
+    year = "2020"
+}
+
+@article{Cowan:2010js,
+    author = "Cowan, Glen and Cranmer, Kyle and Gross, Eilam and Vitells, Ofer",
+    title = "{Asymptotic formulae for likelihood-based tests of new physics}",
+    eprint = "1007.1727",
+    archivePrefix = "arXiv",
+    primaryClass = "physics.data-an",
+    doi = "10.1140/epjc/s10052-011-1554-0",
+    journal = "Eur. Phys. J. C",
+    volume = "71",
+    pages = "1554",
+    year = "2011",
+    note = "[Erratum: Eur.Phys.J.C 73, 2501 (2013)]"
+}
+
+@misc{River_HPC,
+  title={{Research Infrastructure to explore Volatility, Energy-efficiency, and Resilience (RIVER)}},
+  url={https://river.cs.uchicago.edu/products-services.html},
+  journal={Compute Environment | University of Chicago Department of Computer Science}
+}
+
+@software{study_code,
+  author = {Lukas Heinrich and Matthew Feickert and Giordon Stark and Ben Galewsky},
+  title = "{Distributed Inference with pyhf and funcX}",
+  url = {https://github.com/matthewfeickert/distributed-inference-with-pyhf-and-funcX},
+}
+
 @article{Maguire:2017ypu,
       author         = "Maguire, Eamonn and Heinrich, Lukas and Watt, Graeme",
       title          = "{HEPData: a repository for high energy physics data}",
@@ -26,142 +146,6 @@
       url           = "https://cds.cern.ch/record/1456844",
 }
 
-% DIANA/HEP NSF proposal
-@misc{DIANA-proposal-2014,
-    title = {{Data-Intensive Analysis for High Energy Physics (DIANA/HEP)}},
-    author = {Elmer, Peter and Cranmer, Kyle and Sokolof, Mike and Bockelman, Brian},
-    year = {2014},
-    month = {June},
-    url = {http://diana-hep.org/downloads/ssi2014-nsf-proposal.pdf},
-}
-
-% DIANA/HEP fellowship summary report
-@misc{matthew_feickert_2018_1458059,
-  author       = {Matthew Feickert},
-  title        = {{A study of data flow graph frameworks for statistical models in particle physics}},
-  month        = {October},
-  year         = {2018},
-  doi          = {10.5281/zenodo.1458059},
-  url          = {https://doi.org/10.5281/zenodo.1458059}
-}
-
-% JSONPatch reference
-@misc{rfc6902,
-	series =	{Request for Comments},
-	number =	6902,
-	howpublished =	{RFC 6902},
-	publisher =	{RFC Editor},
-	doi =		{10.17487/RFC6902},
-	url =		{https://rfc-editor.org/rfc/rfc6902.txt},
-  author =	{Paul C. Bryan and Mark Nottingham},
-	pagetotal =	18,
-	year =		2013,
-	month =		apr,
-	abstract =	{JSON Patch defines a JSON document structure for expressing a sequence of operations to apply to a JavaScript Object Notation (JSON) document; it is suitable for use with the HTTP PATCH method. The "application/json-patch+json" media type is used to identify such patch documents.},
-}
-
-@misc{schema_workspace,
-  title = {Workspace Schema, v1.0.0},
-  howpublished = {\url{https://diana-hep.org/pyhf/schemas/1.0.0/workspace.json}},
-  note = {Accessed: 2019-07-01}
-}
-
-@misc{schema_model,
-  title = {Model Schema, v1.0.0},
-  howpublished = {\url{https://diana-hep.org/pyhf/schemas/1.0.0/model.json}},
-  note = {Accessed: 2019-07-01}
-}
-
-@misc{schema_defs,
-  title = {Base Definitions Schema, v1.0.0},
-  howpublished = {\url{https://diana-hep.org/pyhf/schemas/1.0.0/defs.json}},
-  note = {Accessed: 2019-07-01}
-}
-
-@misc{hepdata_sbottom,
-    author = "{ATLAS Collaboration}",
-    abstract = "",
-    howpublished = "HEPData",
-    doi = "10.17182/hepdata.89408",
-    year = "2019",
-    type = "Data Collection",
-    url = "https://www.hepdata.net/record/ins1748602?version=1"
-}
-
-@article{ROOT,
-title = "ROOT — An object oriented data analysis framework",
-journal = "Nucl. Inst. Meth. in Phys. Res. A",
-volume = "389",
-number = "1",
-pages = "81 - 86",
-year = "1997",
-issn = "0168-9002",
-doi = "https://doi.org/10.1016/S0168-9002(97)00048-X",
-url = "http://www.sciencedirect.com/science/article/pii/S016890029700048X",
-author = "Rene Brun and Fons Rademakers",
-abstract = "The ROOT system in an Object Oriented framework for large scale data analysis. ROOT written in C++, contains, among others, an efficient hierarchical OO database, a C++ interpreter, advanced statistical analysis (multi-dimensional histogramming, fitting, minimization, cluster finding algorithms) and visualization tools. The user interacts with ROOT via a graphical user interface, the command line or batch scripts. The command and scripting language is C++ (using the interpreter) and large scripts can be compiled and dynamically linked in. The OO database design has been optimized for parallel access (reading as well as writing) by multiple processes."
-}
-
-@article{RooStats,
-      author         = "Moneta, Lorenzo and others",
-      title          = "{The RooStats Project (proceedings)}",
-      booktitle      = "{Proceedings, 13th International Workshop on Advanced
-                        computing and analysis techniques in physics research
-                        (ACAT2010): Jaipur, India, February 22-27, 2010}",
-      journal        = "PoS",
-      volume         = "ACAT2010",
-      year           = "2010",
-      pages          = "057",
-      doi            = "10.22323/1.093.0057",
-      SLACcitation   = "%%CITATION = ARXIV:1009.1003;%%"
-}
-
-% pyhf Zenodo
-@software{pyhf,
-  author = "Heinrich, Lukas and Feickert, Matthew and Stark, Giordon",
-  title = "{pyhf: v0.4.1}",
-  version = {0.4.1},
-  year = "2020",
-  doi = {10.5281/zenodo.1169739},
-  url = {https://doi.org/10.5281/zenodo.1169739},
-}
-
-@article{scipy,
-      author = {{Virtanen}, Pauli and others},
-      title = "{SciPy 1.0: Fundamental Algorithms for Scientific
-                  Computing in Python}",
-      journal = {Nature Methods},
-      year = "2020",
-      volume={17},
-      pages={261--272},
-      adsurl = {https://rdcu.be/b08Wh},
-      doi = {https://doi.org/10.1038/s41592-019-0686-2},
-}
-
-@article{numpy,
-author={S. {van der Walt} and S. C. {Colbert} and G. {Varoquaux}},
-journal={Computing in Science Engineering},
-title={The NumPy Array: A Structure for Efficient Numerical Computation},
-year={2011},
-volume={13},
-number={2},
-pages={22-30},
-keywords={data structures;high level languages;mathematics computing;numerical analysis;numerical computation;numpy array;numerical data;high level language;Python programming language;Arrays;Numerical analysis;Performance evaluation;Computational efficiency;Finite element methods;Vector quantization;Resource management;Python;NumPy;scientific programming;numerical computations;programming libraries},
-doi={10.1109/MCSE.2011.37},
-ISSN={1521-9615},
-month={March},}
-
-@proceedings{James:2000et,
-      editor         = "James, F. and Perrin, Y. and Lyons, L.",
-      title          = "{Workshop on confidence limits: Proceedings}",
-      url            = "https://cds.cern.ch/record/411537",
-      month          = jan,
-      year           = "2000",
-      reportNumber   = "CERN-2000-005",
-      doi            = "10.5170/CERN-2000-005",
-      SLACcitation   = "%%CITATION = CERN-2000-005;%%"
-}
-
 % Uses HistFactory for background
 @article{Aaij:2015sqa,
     author = "{LHCb Collaboration}",
@@ -175,17 +159,4 @@ month={March},}
     number = "3",
     pages = "032002",
     year = "2015"
-}
-
-@article{Heinrich:2018nip,
-    author = "Heinrich, Lukas and Schulz, Holger and Turner, Jessica and Zhou, Ye-Ling",
-    title = "{Constraining A$_{4}$ leptonic flavour model parameters at colliders and beyond}",
-    archivePrefix = "arXiv",
-    primaryClass = "hep-ph",
-    reportNumber = "FERMILAB-PUB-18-548-CD-T, NSF ACI-1450310, PHY-1505463",
-    doi = "10.1007/JHEP04(2019)144",
-    journal = "JHEP",
-    volume = "04",
-    pages = "144",
-    year = "2019"
 }
