@@ -25,24 +25,30 @@ def main():
 
     table_data = pd.DataFrame(
         dict(
-            analysis=["ATLAS SUSY 1Lbb", "ATLAS SUSY SS3L", "ATLAS SUSY 2018"],
+            # analysis=["ATLAS SUSY 1Lbb", "ATLAS SUSY SS3L", "ATLAS SUSY staus"],
+            analysis=[
+                "Eur. Phys. J. C 80 (2020) 691",
+                "JHEP 06 (2020) 46",
+                "Phys. Rev. D 101 (2020) 032009",
+            ],
             worker_nodes=[85, 85, 85],
             mean_wall_time=mean_wall_time,
-            best_wall_time=best_wall_time,
+            single_node=["Awaiting results", "Awaiting results", "Awaiting results"],
         )
     )
 
     caption = (
-        f"Fitting performance on RIVER for analyses for {len(times)} trials."
-        + " The uncertainty on the mean wall time corresponds to the standard deviation of the fit times."
+        f"Fitting performance on RIVER for analyses for {len(times)} trials compared to a single node."
+        + " The reported wall fit time is the mean wall fit time of the trials."
+        + " The uncertainty on the mean wall time corresponds to the standard deviation of the wall fit times."
         + " The number of worker nodes used is approximate as per-run reporting is not available."
     )
     performance_table_latex = table_data.to_latex(
         header=[
             "Analysis",
-            "Worker nodes",
-            "Mean wall time (sec)",
-            "Best wall time (sec)",
+            "Workers",
+            "Wall time (sec)",
+            "Single node time (sec)",
         ],
         caption=caption,
         label="table:performance",
