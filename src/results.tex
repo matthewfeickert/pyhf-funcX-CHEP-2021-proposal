@@ -1,6 +1,5 @@
-\section{Scaling of likelihood fits}\label{sec:results}
+\section{Scaling of Statistical Inference}\label{sec:results}
 %
-% The output of execution of the 125 signal hypothesis patches from~\cite{SUSY-2019-08} is shown in \Cref{lst:funcX_demo_output}.
 A clear example of the performance gains provided by deploying \pyhf{} on \funcX{} is the execution of the 125 signal hypothesis patches from~\cite{SUSY-2019-08}.
 By orchestrating \pyhf{} fits packaged as \funcX{} functions across 85 worker nodes, \funcX{} is able to receive posted JSON serializations of the \pyhf{} pallet containing the background workspace and signal patches downloaded from HEPData~\cite{ATLAS_SUSY_1Lbb_pallet}, start \funcX{} worker nodes, send patched workspaces to each worker, fit the workspace and return the results with a wall time of under 2 minutes and 30 seconds.
 As this wall time includes data transfer to and from RIVER and worker node orchestration time, the time required for inference alone is even smaller.
