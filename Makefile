@@ -60,3 +60,30 @@ final:
 	$(MAKE) text
 	$(MAKE) clean
 	$(MAKE) lint
+
+arXiv: realclean document
+	mkdir submit_to_arXiv
+	cp *.tex submit_to_arXiv
+	cp *.bbl submit_to_arXiv/ms.bbl
+	cp Makefile submit_to_arXiv
+	cp -r figures submit_to_arXiv
+	mv submit_to_arXiv/main.tex submit_to_arXiv/ms.tex
+	# -i.bak is used for compatability across GNU and BSD/macOS sed
+	# Change the FILENAME to ms while ignoring commented lines
+	sed -i.bak '/^ *#/d;s/#.*//;0,/FILENAME/s/.*/FILENAME = ms/' submit_to_arXiv/Makefile
+	# Remove hyperref for arXiv
+	sed -i.bak '/{hyperref}/d' submit_to_arXiv/ms.tex
+	find submit_to_arXiv/ -name "*.bak" -type f -delete
+	# arXiv requires .bib files to be compiled to .bbl files and will remove any .bib files
+	find submit_to_arXiv/ -name "*.bib" -type f -delete
+	tar -zcvf submit_to_arXiv.tar.gz submit_to_arXiv/
+	rm -rf submit_to_arXiv
+	$(MAKE) realclean
+
+clean_arXiv:
+	if [ -f submit_to_arXiv.tar.gz ];then \
+		rm submit_to_arXiv.tar.gz; \
+	fi
+
+deep_clean: realclean clean_arXiv
+	rm -rf submit_to_arXiv
