@@ -74,8 +74,12 @@ arXiv: deep_clean document
 	# -i.bak is used for compatability across GNU and BSD/macOS sed
 	# Change the FILENAME to ms while ignoring commented lines
 	sed -i.bak '/^ *#/d;s/#.*//;0,/FILENAME/s/.*/FILENAME = ms/' submit_to_arXiv/Makefile
+	# Move webofc document class to top level
+	mv submit_to_arXiv/latex/webofc.cls submit_to_arXiv/webofc.cls
+	sed -i.bak 's#latex/webofc#webofc#' submit_to_arXiv/ms.tex
 	# Remove hyperref for arXiv
 	sed -i.bak '/{hyperref}/d' submit_to_arXiv/latex/packages.tex
+	sed -i.bak '/hypersetup/d' submit_to_arXiv/latex/packages.tex
 	find submit_to_arXiv/ -name "*.bak" -type f -delete
 	# arXiv requires .bib files to be compiled to .bbl files and will remove any .bib files
 	find submit_to_arXiv/ -name "*.bib" -type f -delete
