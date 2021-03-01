@@ -1,0 +1,36 @@
+# Start
+
+## License Statement
+
+CC BY: Creative Commons Attribution
+
+## Archive and Subject Class
+
+primary classification for this submission:
+
+- High Energy Physics - Experiment
+
+# Metadata
+
+## Title
+
+Distributed statistical inference with pyhf enabled through funcX
+
+## Author(s)
+
+Matthew Feickert, Lukas Heinrich, Giordon Stark, Ben Galewsky
+
+## Abstract
+
+In High Energy Physics facilities that provide High Performance Computing environments provide an opportunity to efficiently perform the statistical inference required for analysis of data from the Large Hadron Collider, but can pose problems with orchestration and efficient scheduling. The compute architectures at these facilities do not easily support the Python compute model, and the configuration scheduling of batch jobs for physics often requires expertise in multiple job scheduling services. The combination of the pure-Python libraries pyhf and funcX reduces the common problem in HEP analyses of performing statistical inference with binned models, that would traditionally take multiple hours and bespoke scheduling, to an on-demand (fitting) "function as a service" that can scalably execute across workers in just a few minutes, offering reduced time to insight and inference. We demonstrate execution of a scalable workflow using funcX to simultaneously fit 125 signal hypotheses from a published ATLAS search for new physics using pyhf with a wall time of under 3 minutes. We additionally show performance comparisons for other physics analyses with openly published probability models and argue for a blueprint of fitting as a service systems at HPC centers.
+
+## Comments
+
+9 pages, 1 figure, 2 listings, 1 table, submitted to the 25th International Conference on Computing in High Energy & Nuclear Physics
+
+# Preview
+
+## Categories
+
+* Primary: High Energy Physics - Experiment (hep-ex)
+* Cross lists (optional):
