@@ -30,7 +30,7 @@ This helps to match the job profiles against a wide variety of compute environme
 The endpoint process itself is light weight and consumes minimal resources while awaiting new tasks to schedule on workers.\\
 
 The dependencies required to execute user defined functions can be setup in multiple ways.
-Developers can provide a command that will be executed on each worker prior to scheduling any tasks to install dependencies (e.g. \texttt{pip install "pyhf[contrib]"}).
+Developers can provide a command to install dependencies that will be executed on each worker prior to scheduling any tasks (e.g. \texttt{pip install "pyhf[contrib]"}).
 Environments that support containerization through Shifter or Singularity can specify a container in the setup.
 This is easiest to administer; however, it implies that all tasks running on that endpoint can only depend on these provided settings.
 Currently, the Kubernetes executor offers more sophisticated support for containers.
