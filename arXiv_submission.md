@@ -8,7 +8,7 @@ CC BY: Creative Commons Attribution
 
 primary classification for this submission:
 
-- High Energy Physics - Experiment
+- Computer Science - Distributed, Parallel, and Cluster Computing
 
 # Metadata
 
@@ -32,5 +32,6 @@ In High Energy Physics facilities that provide High Performance Computing enviro
 
 ## Categories
 
-* Primary: High Energy Physics - Experiment (hep-ex)
-* Cross lists (optional):
+**Categories:**
+* Primary: Distributed, Parallel, and Cluster Computing (cs.DC)
+* Cross lists (optional): High Energy Physics - Experiment (hep-ex)
