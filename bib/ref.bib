@@ -1,3 +1,10 @@
+@misc{ThetaANL,
+  title = "{Argonne Leadership Computing Facility: Theta/ThetaGPU Machine Overview}",
+  howpublished = "\url{https://www.alcf.anl.gov/support-center/theta/theta-thetagpu-overview}",
+  year = {2021},
+  note = {Accessed: 2021-02-28}
+}
+
 % pyhf Zenodo
 @software{pyhf,
   author = {Lukas Heinrich and Matthew Feickert and Giordon Stark},
@@ -40,45 +47,31 @@ location = {Stockholm, Sweden},
 series = {HPDC '20}
 }
 
-@inproceedings{Parsl_paper,
-author = {Babuji, Yadu and Woodard, Anna and Li, Zhuozhao and Katz, Daniel S. and Clifford, Ben and Kumar, Rohan and Lacinski, Lukasz and Chard, Ryan and Wozniak, Justin M. and Foster, Ian and Wilde, Michael and Chard, Kyle},
-title = {Parsl: Pervasive Parallel Programming in Python},
-year = {2019},
-isbn = {9781450366700},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3307681.3325400},
-doi = {10.1145/3307681.3325400},
-abstract = {High-level programming languages such as Python are increasingly used to provide intuitive interfaces to libraries written in lower-level languages and for assembling applications from various components. This migration towards orchestration rather than implementation, coupled with the growing need for parallel computing (e.g., due to big data and the end of Moore's law), necessitates rethinking how parallelism is expressed in programs. Here, we present Parsl, a parallel scripting library that augments Python with simple, scalable, and flexible constructs for encoding parallelism. These constructs allow Parsl to construct a dynamic dependency graph of components that it can then execute efficiently on one or many processors. Parsl is designed for scalability, with an extensible set of executors tailored to different use cases, such as low-latency, high-throughput, or extreme-scale execution. We show, via experiments on the Blue Waters supercomputer, that Parsl executors can allow Python scripts to execute components with as little as 5 ms of overhead, scale to more than 250000 workers across more than 8000 nodes, and process upward of 1200 tasks per second. Other Parsl features simplify the construction and execution of composite programs by supporting elastic provisioning and scaling of infrastructure, fault-tolerant execution, and integrated wide-area data management. We show that these capabilities satisfy the needs of many-task, interactive, online, and machine learning applications in fields such as biology, cosmology, and materials science.},
-booktitle = {Proceedings of the 28th International Symposium on High-Performance Parallel and Distributed Computing},
-pages = {25–36},
-numpages = {12},
-keywords = {parallel programming, python, parsl},
-location = {Phoenix, AZ, USA},
-series = {HPDC '19}
+@techreport{Cranmer:1456844,
+      author        = "Cranmer, Kyle and Lewis, George and Moneta, Lorenzo and
+                       Shibata, Akira and Verkerke, Wouter",
+      title         = "{HistFactory: A tool for creating statistical models for
+                       use with RooFit and RooStats}",
+      number        = "CERN-OPEN-2012-016",
+      month         = "Jan",
+      year          = "2012",
+      reportNumber  = "CERN-OPEN-2012-016",
+      url           = "https://cds.cern.ch/record/1456844",
 }
 
-@misc{ThetaANL,
-  title={{Argonne Leadership Computing Facility}},
-  url={https://www.alcf.anl.gov/support-center/theta/theta-thetagpu-overview},
-  journal={Theta/ThetaGPU Machine Overview | Argonne Leadership Computing Facility}
-}
-
-@misc{portable_inference_workshop,
-    title = {{Fitting and Statistical Inference as a Service}},
-    author = {Matthew Feickert},
-    year = {2020},
-    month = {Dec},
-    note = {{IRIS-HEP Blueprint Workshop on Portable Inference}},
-    url = {https://indico.cern.ch/event/972791/contributions/4121109/},
-}
-
-@misc{ATLAS_SUSY_1Lbb_pallet,
-    author = {{ATLAS Collaboration}},
-    year = {2020},
-    note = {{DOI: 10.17182/hepdata.90607.v3/r3}},
-    doi = {10.17182/hepdata.90607.v3/r3},
-    url = {https://doi.org/10.17182/hepdata.90607.v3/r3},
+% Uses HistFactory for background
+@article{Aaij:2015sqa,
+    author = "{LHCb Collaboration}",
+    title = "{Dalitz plot analysis of $B^0 \to \overline{D}^0 \pi^+\pi^-$ decays}",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-ex",
+    reportNumber = "CERN-PH-EP-2015-110, LHCB-PAPER-2014-070",
+    doi = "10.1103/PhysRevD.92.032002",
+    journal = "Phys. Rev. D",
+    volume = "92",
+    number = "3",
+    pages = "032002",
+    year = "2015"
 }
 
 % SModelS paper
@@ -106,18 +99,6 @@ series = {HPDC '19}
     note = "[Erratum: Eur.Phys.J.C 73, 2501 (2013)]"
 }
 
-@misc{River_HPC,
-  title={{Research Infrastructure to explore Volatility, Energy-efficiency, and Resilience (RIVER)}},
-  url={https://river.cs.uchicago.edu/products-services.html},
-  journal={Compute Environment | University of Chicago Department of Computer Science}
-}
-
-@software{study_code,
-  author = {Lukas Heinrich and Matthew Feickert and Giordon Stark and Ben Galewsky},
-  title = "{Distributed Inference with pyhf and funcX}",
-  url = {https://github.com/matthewfeickert/distributed-inference-with-pyhf-and-funcX},
-}
-
 @article{Maguire:2017ypu,
       author         = "Maguire, Eamonn and Heinrich, Lukas and Watt, Graeme",
       title          = "{HEPData: a repository for high energy physics data}",
@@ -134,29 +115,70 @@ series = {HPDC '19}
       SLACcitation   = "%%CITATION = ARXIV:1704.05473;%%"
 }
 
-@techreport{Cranmer:1456844,
-      author        = "Cranmer, Kyle and Lewis, George and Moneta, Lorenzo and
-                       Shibata, Akira and Verkerke, Wouter",
-      title         = "{HistFactory: A tool for creating statistical models for
-                       use with RooFit and RooStats}",
-      number        = "CERN-OPEN-2012-016",
-      month         = "Jan",
-      year          = "2012",
-      reportNumber  = "CERN-OPEN-2012-016",
-      url           = "https://cds.cern.ch/record/1456844",
+@inproceedings{Parsl_paper,
+author = {Babuji, Yadu and Woodard, Anna and Li, Zhuozhao and Katz, Daniel S. and Clifford, Ben and Kumar, Rohan and Lacinski, Lukasz and Chard, Ryan and Wozniak, Justin M. and Foster, Ian and Wilde, Michael and Chard, Kyle},
+title = {Parsl: Pervasive Parallel Programming in Python},
+year = {2019},
+isbn = {9781450366700},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3307681.3325400},
+doi = {10.1145/3307681.3325400},
+abstract = {High-level programming languages such as Python are increasingly used to provide intuitive interfaces to libraries written in lower-level languages and for assembling applications from various components. This migration towards orchestration rather than implementation, coupled with the growing need for parallel computing (e.g., due to big data and the end of Moore's law), necessitates rethinking how parallelism is expressed in programs. Here, we present Parsl, a parallel scripting library that augments Python with simple, scalable, and flexible constructs for encoding parallelism. These constructs allow Parsl to construct a dynamic dependency graph of components that it can then execute efficiently on one or many processors. Parsl is designed for scalability, with an extensible set of executors tailored to different use cases, such as low-latency, high-throughput, or extreme-scale execution. We show, via experiments on the Blue Waters supercomputer, that Parsl executors can allow Python scripts to execute components with as little as 5 ms of overhead, scale to more than 250000 workers across more than 8000 nodes, and process upward of 1200 tasks per second. Other Parsl features simplify the construction and execution of composite programs by supporting elastic provisioning and scaling of infrastructure, fault-tolerant execution, and integrated wide-area data management. We show that these capabilities satisfy the needs of many-task, interactive, online, and machine learning applications in fields such as biology, cosmology, and materials science.},
+booktitle = {Proceedings of the 28th International Symposium on High-Performance Parallel and Distributed Computing},
+pages = {25–36},
+numpages = {12},
+keywords = {parallel programming, python, parsl},
+location = {Phoenix, AZ, USA},
+series = {HPDC '19}
 }
 
-% Uses HistFactory for background
-@article{Aaij:2015sqa,
-    author = "{LHCb Collaboration}",
-    title = "{Dalitz plot analysis of $B^0 \to \overline{D}^0 \pi^+\pi^-$ decays}",
-    archivePrefix = "arXiv",
-    primaryClass = "hep-ex",
-    reportNumber = "CERN-PH-EP-2015-110, LHCB-PAPER-2014-070",
-    doi = "10.1103/PhysRevD.92.032002",
-    journal = "Phys. Rev. D",
-    volume = "92",
-    number = "3",
-    pages = "032002",
-    year = "2015"
+@misc{River_HPC,
+  title="{Research Infrastructure to explore Volatility, Energy-efficiency, and Resilience (RIVER):
+Usage Models and Resources}",
+  howpublished = "\url{http://river.cs.uchicago.edu/website-builder.html}",
+  year = {2021},
+  note = {Accessed: 2021-02-28}
+}
+
+@misc{portable_inference_workshop,
+    title = {{Fitting and Statistical Inference as a Service}},
+    author = {Matthew Feickert},
+    year = {2020},
+    month = {Dec},
+    note = {{IRIS-HEP Blueprint Workshop on Portable Inference}},
+    url = {https://indico.cern.ch/event/972791/contributions/4121109/},
+}
+
+@misc{ATLAS_SUSY_1Lbb_pallet,
+    author = {{ATLAS Collaboration}},
+    title = "{Search for direct production of electroweakinos in final states with one lepton, missing transverse momentum and a Higgs boson decaying into two \(b\)-jets in \(pp\) collisions at \(\sqrt{s} = 13\,\text{TeV}\) with the ATLAS detector}",
+    doi = "10.17182/hepdata.90607.v4",
+    url = "https://doi.org/10.17182/hepdata.90607.v4",
+    year = "2020",
+    type = "Data Collection"
+}
+
+@misc{ATLAS_SUSY_SS3L_pallet,
+    author = {{ATLAS Collaboration}},
+    title = "{Search for squarks and gluinos in final states with same-sign leptons and jets using \(139\,\text{fb}^{-1}\) of data collected with the ATLAS detector}",
+    doi = "10.17182/hepdata.91214.v4",
+    url = "https://doi.org/10.17182/hepdata.91214.v4",
+    year = "2020",
+    type = "Data Collection"
+}
+
+@misc{ATLAS_SUSY_staus_pallet,
+    author = {{ATLAS Collaboration}},
+    title = "{Search for direct stau production in events with two hadronic \(\tau\)-leptons in \(\sqrt{s} = 13\,\text{TeV}\) \(pp\) collisions with the ATLAS detector}",
+    doi = "10.17182/hepdata.92006.v2",
+    url = "https://doi.org/10.17182/hepdata.92006.v2",
+    year = "2020",
+    type = "Data Collection"
+}
+
+@software{study_code,
+  author = {Lukas Heinrich and Matthew Feickert and Giordon Stark and Ben Galewsky},
+  title = "{Distributed Inference with pyhf and funcX}",
+  url = {https://github.com/matthewfeickert/distributed-inference-with-pyhf-and-funcX},
 }
