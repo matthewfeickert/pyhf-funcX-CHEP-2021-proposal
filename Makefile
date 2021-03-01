@@ -67,7 +67,7 @@ arXiv: realclean document
 	cp *.bbl submit_to_arXiv/ms.bbl
 	cp Makefile submit_to_arXiv
 	cp -r figures submit_to_arXiv
-	mv submit_to_arXiv/main.tex submit_to_arXiv/ms.tex
+	mv submit_to_arXiv/CHEP_2021_proposal.tex submit_to_arXiv/ms.tex
 	# -i.bak is used for compatability across GNU and BSD/macOS sed
 	# Change the FILENAME to ms while ignoring commented lines
 	sed -i.bak '/^ *#/d;s/#.*//;0,/FILENAME/s/.*/FILENAME = ms/' submit_to_arXiv/Makefile
