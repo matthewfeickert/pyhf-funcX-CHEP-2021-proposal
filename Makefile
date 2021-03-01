@@ -62,7 +62,7 @@ final:
 	$(MAKE) lint
 
 arXiv: deep_clean document
-    # Get a minted cache
+	# Get a minted cache
 	sed -i.bak 's/cache=false/cache=true/' latex/packages.tex
 	$(MAKE) document
 	# Copy files
