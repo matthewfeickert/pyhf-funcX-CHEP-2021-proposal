@@ -61,7 +61,7 @@ final:
 	$(MAKE) clean
 	$(MAKE) lint
 
-arXiv: realclean document
+arXiv: deep_clean document
 	mkdir submit_to_arXiv
 	cp *.tex submit_to_arXiv
 	cp *.bbl submit_to_arXiv/ms.bbl
