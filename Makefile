@@ -62,6 +62,10 @@ final:
 	$(MAKE) lint
 
 arXiv: deep_clean document
+    # Get a minted cache
+	sed -i.bak 's/cache=false/cache=true/' latex/packages.tex
+	$(MAKE) document
+	# Copy files
 	mkdir submit_to_arXiv
 	cp CHEP_2021_proposal.tex submit_to_arXiv
 	cp *.bbl submit_to_arXiv/ms.bbl
@@ -70,6 +74,7 @@ arXiv: deep_clean document
 	cp -r data submit_to_arXiv
 	cp -r figures submit_to_arXiv
 	cp Makefile submit_to_arXiv
+	mv _minted-CHEP_2021_proposal submit_to_arXiv/_minted-ms
 	mv submit_to_arXiv/CHEP_2021_proposal.tex submit_to_arXiv/ms.tex
 	# -i.bak is used for compatability across GNU and BSD/macOS sed
 	# Change the FILENAME to ms while ignoring commented lines
@@ -80,12 +85,19 @@ arXiv: deep_clean document
 	# Remove hyperref for arXiv
 	sed -i.bak '/{hyperref}/d' submit_to_arXiv/latex/packages.tex
 	sed -i.bak '/hypersetup/d' submit_to_arXiv/latex/packages.tex
+	# Use cache for minted
+	# c.f. https://github.com/gpoore/minted/issues/113#issuecomment-223451550
+	sed -i.bak 's/finalizecache/frozencache/' submit_to_arXiv/latex/packages.tex
+	# Cleanup temp files
 	find submit_to_arXiv/ -name "*.bak" -type f -delete
 	# arXiv requires .bib files to be compiled to .bbl files and will remove any .bib files
 	find submit_to_arXiv/ -name "*.bib" -type f -delete
 	tar -zcvf submit_to_arXiv.tar.gz submit_to_arXiv/
 	rm -rf submit_to_arXiv
 	$(MAKE) realclean
+	if [ -f latex/packages.tex.bak ];then \
+		mv latex/packages.tex.bak latex/packages.tex; \
+	fi
 
 clean_arXiv:
 	if [ -f submit_to_arXiv.tar.gz ];then \
