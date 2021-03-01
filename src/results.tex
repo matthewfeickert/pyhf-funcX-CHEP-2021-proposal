@@ -1,7 +1,7 @@
 \section{Scaling of Statistical Inference}\label{sec:results}
 %
-A clear example of the performance gains provided by deploying \pyhf{} on \funcX{} is the execution of the 125 signal hypothesis patches from~\cite{SUSY-2019-08}.
-By orchestrating \pyhf{} fits packaged as \funcX{} functions across 85 worker nodes, \funcX{} is able to receive posted JSON serializations of the \pyhf{} pallet containing the background workspace and signal patches downloaded from HEPData~\cite{ATLAS_SUSY_1Lbb_pallet}, start \funcX{} worker nodes, send patched workspaces to each worker, fit the workspace and return the results with a wall time of under 2 minutes and 30 seconds.
+A clear example of the performance gains provided by deploying \pyhf{} on \funcX{} is the execution of the 125 signal hypothesis patches from~\cite{SUSY-2019-08} by orchestrating \pyhf{} fits packaged as \funcX{} functions across 85 worker nodes using a Docker image and the Kubernetes \funcX{} executor.
+\funcX{} is able to receive posted JSON serializations of the \pyhf{} pallet containing the background workspace and signal patches downloaded from HEPData~\cite{ATLAS_SUSY_1Lbb_pallet}, start \funcX{} worker nodes, send patched workspaces to each worker, fit the workspace and return the results with a combined wall time of under 3 minutes.
 As this wall time includes data transfer to and from RIVER and worker node orchestration time, the time required for inference alone is even smaller.
 Example typical run output and performance can be seen in~\Cref{lst:funcX_demo_output}.
 The timing results for~\cite{ATLAS_SUSY_1Lbb_pallet}, along with the results from additional analyses that have published probability models as \pyhf{} pallets on HEPData, over multiple trials are summarized in~\Cref{table:performance} and compared to the fit time for all patches on a single node.
