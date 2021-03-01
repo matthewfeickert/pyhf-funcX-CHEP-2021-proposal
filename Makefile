@@ -63,16 +63,19 @@ final:
 
 arXiv: deep_clean document
 	mkdir submit_to_arXiv
-	cp *.tex submit_to_arXiv
+	cp CHEP_2021_proposal.tex submit_to_arXiv
 	cp *.bbl submit_to_arXiv/ms.bbl
-	cp Makefile submit_to_arXiv
+	cp -r src submit_to_arXiv
+	cp -r latex submit_to_arXiv
+	cp -r data submit_to_arXiv
 	cp -r figures submit_to_arXiv
+	cp Makefile submit_to_arXiv
 	mv submit_to_arXiv/CHEP_2021_proposal.tex submit_to_arXiv/ms.tex
 	# -i.bak is used for compatability across GNU and BSD/macOS sed
 	# Change the FILENAME to ms while ignoring commented lines
 	sed -i.bak '/^ *#/d;s/#.*//;0,/FILENAME/s/.*/FILENAME = ms/' submit_to_arXiv/Makefile
 	# Remove hyperref for arXiv
-	sed -i.bak '/{hyperref}/d' submit_to_arXiv/ms.tex
+	sed -i.bak '/{hyperref}/d' submit_to_arXiv/latex/packages.tex
 	find submit_to_arXiv/ -name "*.bak" -type f -delete
 	# arXiv requires .bib files to be compiled to .bbl files and will remove any .bib files
 	find submit_to_arXiv/ -name "*.bib" -type f -delete
