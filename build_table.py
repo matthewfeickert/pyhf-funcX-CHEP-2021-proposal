@@ -15,7 +15,7 @@ def main():
 
     file_list = ["1Lbb", "InclSS3L", "staus"]
     for filename in file_list:
-        file_path = Path("data").joinpath(f"{filename}_times.txt")
+        file_path = Path("data").joinpath("river").joinpath(f"{filename}_times.txt")
         with open(file_path, "r") as readfile:
             lines = readfile.readlines()
 
@@ -25,7 +25,9 @@ def main():
     single_node_time = []
     file_list = ["1Lbb", "InclSS3L", "staus"]
     for filename in file_list:
-        file_path = Path("data").joinpath(f"{filename}_single_node_time.txt")
+        file_path = (
+            Path("data").joinpath("river").joinpath(f"{filename}_single_node_time.txt")
+        )
         with open(file_path, "r") as readfile:
             time = readfile.readlines()[0]
         single_node_time.append(convert_to_seconds(time))
