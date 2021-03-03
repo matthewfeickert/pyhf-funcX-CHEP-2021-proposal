@@ -48,7 +48,8 @@ def main():
     )
 
     caption = (
-        f"Scaling performance on RIVER for analysis fits over {len(times)} trials compared to a single RIVER node."
+        "Scaling performance on RIVER for analysis fits, using \pyhf{}'s NumPy backend and SciPy optimizer,"
+        + f" over {len(times)} trials compared to a single RIVER node."
         + " The reported wall fit time is the mean wall fit time of the trials."
         + " The uncertainty on the mean wall time corresponds to the standard deviation of the wall fit times."
         + " The number of worker nodes used is approximate as per-run reporting is not available."
