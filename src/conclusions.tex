@@ -1,7 +1,7 @@
 \section{Conclusions}\label{sec:conclusions}
 
 Through the combined use of the pure-Python libraries \funcX{} and \pyhf{}, we have demonstrated the ability to parallelize and accelerate statistical inference of physics analyses on HPC systems through a FaaS solution.
-Without having to write any bespoke batch jobs, inference can be registered and executed by analysts with a client Python API that still achieve the large performance gains compared to single node execution that is a typical motivation of use of batch systems.
+Without having to write any bespoke batch jobs, inference can be registered and executed by analysts with a client Python API that still achieves the large performance gains compared to single node execution that is a typical motivation of use of batch systems.
 There is ongoing work to better monitor and extract the time costs associated with overhead and communication from the time devoted purely to statistical inference.
 Characterizing these costs will allow for better understanding of the scaling behavior observed across workers.
 The results obtained on CPU further motivate the study of scaling performance with \funcX{} across GPU --- leveraging \pyhf{}'s hardware accelerated computational backends --- and the consideration of dedicated FaaS analysis facilities on HPC sites.
