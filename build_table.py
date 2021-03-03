@@ -15,7 +15,7 @@ def main():
 
     file_list = ["1Lbb", "InclSS3L", "staus"]
     for filename in file_list:
-        file_path = Path("data").joinpath(f"{filename}_times.txt")
+        file_path = Path("data").joinpath("river").joinpath(f"{filename}_times.txt")
         with open(file_path, "r") as readfile:
             lines = readfile.readlines()
 
@@ -25,7 +25,9 @@ def main():
     single_node_time = []
     file_list = ["1Lbb", "InclSS3L", "staus"]
     for filename in file_list:
-        file_path = Path("data").joinpath(f"{filename}_single_node_time.txt")
+        file_path = (
+            Path("data").joinpath("river").joinpath(f"{filename}_single_node_time.txt")
+        )
         with open(file_path, "r") as readfile:
             time = readfile.readlines()[0]
         single_node_time.append(convert_to_seconds(time))
@@ -46,7 +48,8 @@ def main():
     )
 
     caption = (
-        f"Fitting performance on RIVER for analyses for {len(times)} trials compared to a single node."
+        "Fit times for analyses using \pyhf{}'s NumPy backend and SciPy optimizer orchestrated with \\funcX{} on RIVER"
+        + f" over {len(times)} trials compared to a single RIVER node."
         + " The reported wall fit time is the mean wall fit time of the trials."
         + " The uncertainty on the mean wall time corresponds to the standard deviation of the wall fit times."
         + " The number of worker nodes used is approximate as per-run reporting is not available."
