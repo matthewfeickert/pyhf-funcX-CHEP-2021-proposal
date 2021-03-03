@@ -48,7 +48,7 @@ def main():
     )
 
     caption = (
-        "Scaling performance on RIVER for analysis fits, using \pyhf{}'s NumPy backend and SciPy optimizer,"
+        "Fit times for analyses using \pyhf{}'s NumPy backend and SciPy optimizer orchestrated with \\funcX{} on RIVER"
         + f" over {len(times)} trials compared to a single RIVER node."
         + " The reported wall fit time is the mean wall fit time of the trials."
         + " The uncertainty on the mean wall time corresponds to the standard deviation of the wall fit times."
