@@ -1,12 +1,12 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - '*'       # matches every branch
-      - '*/*'     # matches every branch containing a single '/'
-      - '!main' # excludes main
-  pull_request:
+  # push:
+  #   branches:
+  #     - '*'       # matches every branch
+  #     - '*/*'     # matches every branch containing a single '/'
+  #     - '!main' # excludes main
+  # pull_request:
   # Run daily at 0:01 UTC
   schedule:
   - cron:  '1 0 * * *'
