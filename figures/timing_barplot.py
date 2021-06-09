@@ -62,7 +62,7 @@ def plot_times(
     image_name = f"timing_barplot_{machine_name.lower()}"
     if scale == "log":
         image_name += "_log"
-    file_path = file_path.joinpath(image_name + ".png")
+    file_path = file_path.joinpath(image_name + ".pdf")
     fig.savefig(file_path)
 
 
