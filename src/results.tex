@@ -4,7 +4,8 @@ Using the \funcX{} configuration deployed on RIVER described in~\Cref{subsec:Faa
 As this wall time includes data transfer to and from the user's machine and RIVER, and worker node orchestration time, the time required for inference alone is even smaller.
 Example typical run output and performance can be seen in~\Cref{lst:funcX_demo_output}.
 The timing results over multiple trials for Ref.~\cite{ATLAS_SUSY_1Lbb_pallet}, using \pyhf{}'s NumPy backend and SciPy optimizer, along with the results from additional analyses~\cite{SUSY-2018-09,SUSY-2018-04} that have openly published probability models as \pyhf{} pallets on HEPData~\cite{ATLAS_SUSY_SS3L_pallet,ATLAS_SUSY_staus_pallet}, are summarized in~\Cref{table:performance} and compared to the fit time for all patches on a single node.
-All code used in these studies is publicly available on GitHub at Ref.~\cite{study_code}.
+All code used in these studies is publicly available on GitHub at Ref.~\cite{study_code,study_code_zenodo_doi}.
+\textbf{TODO: FIX ZENODO DOI WHEN AVAILABLE}
 
 As \funcX{} endpoints run as users on the resources they are deployed on, and do not have elevated privileges, the number of worker nodes available is not an endpoint configurable option and so is not reported in this work.
 Endpoints will utilize available resources effectively and allocate jobs to any available workers given their configuration settings.
