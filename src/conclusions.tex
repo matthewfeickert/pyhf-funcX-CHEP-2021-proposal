@@ -5,6 +5,7 @@ Without having to write any bespoke batch jobs, inference can be registered and 
 There is ongoing work to better monitor and extract the time costs associated with overhead and communication from the time devoted purely to statistical inference.
 Characterizing these costs will allow for better understanding of the scaling behavior observed across workers.
 The results obtained on CPU further motivate the study of scaling performance with \funcX{} across GPU --- leveraging \pyhf{}'s hardware accelerated computational backends --- and the consideration of dedicated FaaS analysis facilities on HPC sites.
+These additional resources have the potential to offer even further speedup through acceleration and scaling in situations where complex analyses can have individual models take over ten minutes to fit and might have multiple hundreds of model hypotheses.
 The results additionally motivate investigation of the scaling performance for large scale ensemble fits in the case of statistical combinations of analyses and large dimensional scans of theory parameter space (e.g. phenomenological minimal supersymmetric standard model (pMSSM) scans)~\cite{SUSY-2014-08,Ambrogi:2017lov}.
 
 \begin{listing}
