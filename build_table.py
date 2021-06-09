@@ -32,6 +32,8 @@ def main():
             time = readfile.readlines()[0]
         single_node_time.append(convert_to_seconds(time))
 
+    river_config = {"max_blocks": 4, "nodes_per_block": 1}
+
     table_data = pd.DataFrame(
         dict(
             # analysis=["ATLAS SUSY 1Lbb", "ATLAS SUSY SS3L", "ATLAS SUSY staus"],
@@ -41,7 +43,6 @@ def main():
                 "Phys. Rev. D 101 (2020) 032009",
             ],
             patches=[125, 76, 57],
-            worker_nodes=[85, 85, 85],
             mean_wall_time=mean_wall_time,
             single_node_time=single_node_time,
         )
@@ -49,6 +50,7 @@ def main():
 
     caption = (
         "Fit times for analyses using \pyhf{}'s NumPy backend and SciPy optimizer orchestrated with \\funcX{} on RIVER"
+        + f" with an endpoint configuration of {river_config['nodes_per_block']} nodes per block and max blocks of {river_config['max_blocks']}"
         + f" over {len(times)} trials compared to a single RIVER node."
         + " The reported wall fit time is the mean wall fit time of the trials."
         + " The uncertainty on the mean wall time corresponds to the standard deviation of the wall fit times."
@@ -58,7 +60,6 @@ def main():
         header=[
             "Analysis",
             "Patches",
-            "Workers",
             "Wall time (sec)",
             "Single node (sec)",
         ],
