@@ -50,7 +50,10 @@ def main():
 
     caption = (
         "Fit times for analyses using \pyhf{}'s NumPy backend and SciPy optimizer orchestrated with \\funcX{} on RIVER"
-        + f" with an endpoint configuration of {river_config['nodes_per_block']} nodes per block and max blocks of {river_config['max_blocks']}"
+        + " with an endpoint configuration of and \\texttt{max\_blocks} = "
+        + f"{river_config['max_blocks']}"
+        + " and \\texttt{nodes\_per\_block} = "
+        + f"{river_config['nodes_per_block']}"
         + f" over {len(times)} trials compared to a single RIVER node."
         + " The reported wall fit time is the mean wall fit time of the trials."
         + " The uncertainty on the mean wall time corresponds to the standard deviation of the wall fit times."
